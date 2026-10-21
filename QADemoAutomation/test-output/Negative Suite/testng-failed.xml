@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Negative Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Negative Tests(failed)">
+    <groups>
+      <run>
+        <include name="NT"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="qademo.tests.Cart.OutOfStock_Test">
+        <methods>
+          <include name="verifyOutOfStockProduct"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- qademo.tests.Cart.OutOfStock_Test -->
+      <class name="qademo.tests.Checkout.EmptyCartCheckout_Test">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="verifyCheckoutWithEmptyCart"/>
+        </methods>
+      </class> <!-- qademo.tests.Checkout.EmptyCartCheckout_Test -->
+      <class name="qademo.tests.Login.InvalidLogin_Test">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="verifyLoginWithIncorrectPassword"/>
+        </methods>
+      </class> <!-- qademo.tests.Login.InvalidLogin_Test -->
+    </classes>
+  </test> <!-- Negative Tests(failed) -->
+</suite> <!-- Failed suite [Negative Suite] -->

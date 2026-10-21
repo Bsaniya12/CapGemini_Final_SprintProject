@@ -1,0 +1,153 @@
+<html>
+<head>
+<title>TestNG:  Smoke Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Smoke Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Oct 21 12:51:31 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>24 seconds (24711 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>SM </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='qademo.tests.Login.ValidLogin_Test.verifyValidLogin()'><b>verifyValidLogin</b><br>Test class: qademo.tests.Login.ValidLogin_Test<br/>
+<a href="#Output-1001702066" onClick='toggleBox("Output-1001702066", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1001702066" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1001702066">
+PASS: Login successful.<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>qademo.tests.Login.ValidLogin_Test@6236eb5f</td></tr>
+<tr>
+<td title='qademo.tests.Cart.AddToCart_Test.verifyAddToCart()'><b>verifyAddToCart</b><br>Test class: qademo.tests.Cart.AddToCart_Test<br/>
+<a href="#Output-1551660539" onClick='toggleBox("Output-1551660539", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1551660539" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1551660539">
+PASS: Product was added to the cart successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>qademo.tests.Cart.AddToCart_Test@76ed1b7c</td></tr>
+<tr>
+<td title='qademo.tests.Cart.CartIcon_Test.verifyCartOpens()'><b>verifyCartOpens</b><br>Test class: qademo.tests.Cart.CartIcon_Test<br/>
+<a href="#Output-1977511945" onClick='toggleBox("Output-1977511945", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1977511945" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1977511945">
+PASS: Shopping Cart page opened successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>qademo.tests.Cart.CartIcon_Test@11fc564b</td></tr>
+<tr>
+<td title='qademo.tests.Login.LoginPage_Test.verifyLoginPageOpens()'><b>verifyLoginPageOpens</b><br>Test class: qademo.tests.Login.LoginPage_Test<br/>
+<a href="#Output-15481156" onClick='toggleBox("Output-15481156", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-15481156" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-15481156">
+PASS: Login page opened successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>qademo.tests.Login.LoginPage_Test@394a2528</td></tr>
+<tr>
+<td title='qademo.tests.Order.OrderHistory_Test.verifyOrderHistory()'><b>verifyOrderHistory</b><br>Test class: qademo.tests.Order.OrderHistory_Test<br/>
+<a href="#Output-1801653579" onClick='toggleBox("Output-1801653579", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1801653579" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1801653579">
+PASS: Order history page displayed successfully.<br/>
+Page URL: https://qademo.com/orders<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>qademo.tests.Order.OrderHistory_Test@7c1e2a9e</td></tr>
+<tr>
+<td title='qademo.tests.Product.ProductListing_Test.verifyProductListing()'><b>verifyProductListing</b><br>Test class: qademo.tests.Product.ProductListing_Test<br/>
+<a href="#Output-886037892" onClick='toggleBox("Output-886037892", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-886037892" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-886037892">
+PASS: Product listing page displayed successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>qademo.tests.Product.ProductListing_Test@fa36558</td></tr>
+</table><p>
+</body>
+</html>

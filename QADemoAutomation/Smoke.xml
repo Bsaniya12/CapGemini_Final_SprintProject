@@ -1,0 +1,23 @@
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Smoke Suite">
+    <test name="Smoke Tests">
+
+        <groups>
+            <run>
+                <include name="SM"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="qademo.tests.Cart.AddToCart_Test"/>
+            <class name="qademo.tests.Cart.CartIcon_Test"/>
+            <class name="qademo.tests.Login.LoginPage_Test"/>
+            <class name="qademo.tests.Login.ValidLogin_Test"/>
+            <class name="qademo.tests.Order.OrderHistory_Test"/>
+            <class name="qademo.tests.Product.ProductListing_Test"/>
+        </classes>
+
+    </test>
+</suite>

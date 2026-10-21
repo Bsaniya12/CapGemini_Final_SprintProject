@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Integration Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Integration Tests(failed)">
+    <groups>
+      <run>
+        <include name="IT"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="qademo.tests.Checkout.CartCheckoutIntegration_Test">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifyCartToCheckoutIntegration"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- qademo.tests.Checkout.CartCheckoutIntegration_Test -->
+      <class name="qademo.tests.Cart.AddToCart_Test">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="verifyAddToCart"/>
+        </methods>
+      </class> <!-- qademo.tests.Cart.AddToCart_Test -->
+    </classes>
+  </test> <!-- Integration Tests(failed) -->
+</suite> <!-- Failed suite [Integration Suite] -->

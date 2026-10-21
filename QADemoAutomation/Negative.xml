@@ -1,0 +1,17 @@
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Negative Suite">
+    <test name="Negative Tests">
+        <groups>
+            <run>
+                <include name="NT"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="qademo.tests.Login.InvalidLogin_Test"/>
+            <class name="qademo.tests.Checkout.EmptyCartCheckout_Test"/>
+            <class name="qademo.tests.Cart.OutOfStock_Test"/>
+        </classes>
+    </test>
+</suite>
