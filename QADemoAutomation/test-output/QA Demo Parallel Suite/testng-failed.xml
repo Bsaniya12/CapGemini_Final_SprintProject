@@ -3,13 +3,6 @@
 <suite name="Failed suite [QA Demo Parallel Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" parallel="classes" name="QA Demo Tests(failed)">
     <classes>
-      <class name="qademo.tests.Order.OrderHistory_Test">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="verifyOrderHistory"/>
-        </methods>
-      </class> <!-- qademo.tests.Order.OrderHistory_Test -->
       <class name="qademo.tests.Product.ProductDetails_Test">
         <methods>
           <include name="verifyProductDetails"/>
@@ -17,34 +10,6 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- qademo.tests.Product.ProductDetails_Test -->
-      <class name="qademo.tests.Product.ProductListing_Test">
-        <methods>
-          <include name="tearDown"/>
-          <include name="verifyProductListing"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- qademo.tests.Product.ProductListing_Test -->
-      <class name="qademo.tests.Login.ValidLogin_Test">
-        <methods>
-          <include name="tearDown"/>
-          <include name="verifyValidLogin"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- qademo.tests.Login.ValidLogin_Test -->
-      <class name="qademo.tests.Cart.AddToCart_Test">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="verifyAddToCart"/>
-        </methods>
-      </class> <!-- qademo.tests.Cart.AddToCart_Test -->
-      <class name="qademo.tests.Checkout.ValidCheckout_Test">
-        <methods>
-          <include name="tearDown"/>
-          <include name="verifyValidCheckout"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- qademo.tests.Checkout.ValidCheckout_Test -->
     </classes>
   </test> <!-- QA Demo Tests(failed) -->
 </suite> <!-- Failed suite [QA Demo Parallel Suite] -->

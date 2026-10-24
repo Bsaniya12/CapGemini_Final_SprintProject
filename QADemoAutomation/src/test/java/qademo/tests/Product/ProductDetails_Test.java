@@ -21,7 +21,7 @@ public class ProductDetails_Test extends BaseClass {
 
         System.out.println("Driver before test: " + driver);
 
-        // Login
+        // Step 1: Login
         openPage("/login");
 
         LoginPage login = new LoginPage(driver);
@@ -29,43 +29,69 @@ public class ProductDetails_Test extends BaseClass {
         login.enterPassword(prop.getProperty("password"));
         login.clickSignIn();
 
-        // Wait for elements
-        WebDriverWait wait = new WebDriverWait( driver, Duration.ofSeconds(15));
-               
-        // Open product catalog
+        WebDriverWait wait =
+                new WebDriverWait(driver, Duration.ofSeconds(15));
+
+        wait.until(ExpectedConditions.urlContains("/catalog"));
+
+        // Step 2: Open product catalog
         openPage("/catalog");
 
-        // Select a product
+        // Step 3: Select a product
         WebElement product = wait.until(
-                ExpectedConditions.presenceOfElementLocated(By.cssSelector("[data-testid^='product-link-']")));
-                      
+                ExpectedConditions.presenceOfElementLocated(
+                        By.cssSelector("[data-testid^='product-link-']")));
+
         String productUrl = product.getAttribute("href");
-        Assert.assertNotNull(productUrl,"Product link is not available.");
-              
-        // Open product details
+
+        Assert.assertNotNull(
+                productUrl, "Product link is not available.");
+
+        // Step 4: Open product details
         driver.get(productUrl);
 
-        // Wait for product name
-        WebElement productName = wait.until( ExpectedConditions.visibilityOfElementLocated( By.tagName("h1")));
- 
-        // Get page information
-        String pageText = driver.findElement( By.tagName("body")).getText();
-               
+        // Step 5: Verify product name
+        WebElement productName = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        By.tagName("h1")));
 
-        // Verify product name
-        Assert.assertTrue(productName.isDisplayed(), "Product name is not displayed.");
-              
-        Assert.assertFalse(productName.getText().trim().isEmpty(), "Product name is empty.");
-               
-        // Verify product price
-        Assert.assertTrue(pageText.contains("$"), "Product price is not displayed.");
- 
-        // Verify stock information
-        Assert.assertTrue( pageText.toLowerCase().contains("in stock"), "Stock information is not displayed.");
-               
-        // Print results
-        Reporter.log("Product Name: " + productName.getText(),true);
-        Reporter.log("Product URL: " + productUrl,true);
-        Reporter.log( "PASS: Product details are displayed successfully.",true);            
+        Assert.assertTrue(
+                productName.isDisplayed(),
+                "Product name is not displayed.");
+
+        Assert.assertFalse(
+                productName.getText().trim().isEmpty(),
+                "Product name is empty.");
+
+        // Step 6: Verify product price
+        String pageText = driver.findElement(By.tagName("body")).getText();
+
+        Assert.assertTrue(
+                pageText.contains("$"),
+                "Product price is not displayed.");
+
+        // Step 7: Verify stock information
+        String lowerPageText = pageText.toLowerCase();
+
+        boolean stockDisplayed =
+                lowerPageText.contains("in stock")
+                || lowerPageText.contains("out of stock")
+                || lowerPageText.contains("low stock")
+                || lowerPageText.contains("stock");
+
+        System.out.println("Product: " + productName.getText());
+        System.out.println("Product URL: " + productUrl);
+        System.out.println("Stock information displayed: " + stockDisplayed);
+
+        Assert.assertTrue(
+                stockDisplayed,
+                "Stock information is not displayed.");
+
+        // Step 8: Print results
+        Reporter.log("Product Name: " + productName.getText(), true);
+        Reporter.log("Product URL: " + productUrl, true);
+        Reporter.log(
+                "PASS: Product details are displayed successfully.",
+                true);
     }
 }

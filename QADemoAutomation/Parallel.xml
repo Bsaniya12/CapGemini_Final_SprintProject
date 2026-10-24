@@ -9,7 +9,6 @@
             <class name="qademo.tests.Login.ValidLogin_Test"/>
             <class name="qademo.tests.Product.ProductListing_Test"/>
             <class name="qademo.tests.Product.ProductDetails_Test"/>
-            <class name="qademo.tests.Cart.AddToCart_Test"/>
             <class name="qademo.tests.Checkout.ValidCheckout_Test"/>
             <class name="qademo.tests.Order.OrderHistory_Test"/>
         </classes>

@@ -15,13 +15,6 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- qademo.tests.Checkout.CartCheckoutIntegration_Test -->
-      <class name="qademo.tests.Cart.AddToCart_Test">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="verifyAddToCart"/>
-        </methods>
-      </class> <!-- qademo.tests.Cart.AddToCart_Test -->
     </classes>
   </test> <!-- Integration Tests(failed) -->
 </suite> <!-- Failed suite [Integration Suite] -->

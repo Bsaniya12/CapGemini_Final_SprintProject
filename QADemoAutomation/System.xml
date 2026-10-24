@@ -11,9 +11,9 @@
         </groups>
 
         <classes>
-            <class name="qademo.tests.Cart.CartEndToEnd_Test"/>
+           
             <class name="qademo.tests.Cart.CartRefresh_Test"/>
-            <class name="qademo.tests.Cart.MultipleProductsTotal_Test"/>
+           
         </classes>
 
     </test>

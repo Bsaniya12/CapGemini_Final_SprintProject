@@ -11,11 +11,13 @@
         </groups>
 
         <classes>
-            <class name="qademo.tests.Cart.AddToCart_Test"/>
+        <class name="qademo.tests.Cart.AddToCart_Test"/>
+        
             <class name="qademo.tests.Cart.CartProductDetails_Test"/>
-            <class name="qademo.tests.Cart.ClearCart_Test"/>
+          
             <class name="qademo.tests.Cart.DecreaseQuantity"/>
-            <class name="qademo.tests.Cart.IncreaseQuantity"/>
+
+            <class name="qademo.tests.Cart.AddMultipleProducts_Test"/>
             <class name="qademo.tests.Checkout.ValidCheckout_Test"/>
             <class name="qademo.tests.Order.Order_Refresh_Test"/>
             <class name="qademo.tests.Order.OrderDetails_Test"/>

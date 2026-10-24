@@ -13,6 +13,7 @@
         <classes>
             <class name="qademo.tests.Cart.AddToCart_Test"/>
             <class name="qademo.tests.Cart.CartIcon_Test"/>
+             <class name="qademo.tests.Cart.AddMultipleProducts_Test"/>
             <class name="qademo.tests.Login.LoginPage_Test"/>
             <class name="qademo.tests.Login.ValidLogin_Test"/>
             <class name="qademo.tests.Order.OrderHistory_Test"/>

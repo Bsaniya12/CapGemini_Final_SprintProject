@@ -33,8 +33,6 @@ public class BaseClass {
         }
 
         // Launch selected browser
-
-        // Launch selected browser
         if (browser.equalsIgnoreCase("chrome")) {
             driver = new ChromeDriver();
 

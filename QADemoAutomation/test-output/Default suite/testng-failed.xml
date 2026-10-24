@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="qademo.tests.Checkout.InvalidPayment_Test">
+      <class name="qademo.tests.Cart.AddMultipleProducts_Test">
         <methods>
+          <include name="verifyMultipleProductsCanBeAdded"/>
           <include name="tearDown"/>
-          <include name="verifyInvalidPaymentIsRejected"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- qademo.tests.Checkout.InvalidPayment_Test -->
+      </class> <!-- qademo.tests.Cart.AddMultipleProducts_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

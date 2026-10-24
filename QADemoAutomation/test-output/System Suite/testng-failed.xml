@@ -15,13 +15,6 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- qademo.tests.Cart.CartRefresh_Test -->
-      <class name="qademo.tests.Cart.MultipleProductsTotal_Test">
-        <methods>
-          <include name="tearDown"/>
-          <include name="verifyMultipleProductsTotal"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- qademo.tests.Cart.MultipleProductsTotal_Test -->
     </classes>
   </test> <!-- System Tests(failed) -->
 </suite> <!-- Failed suite [System Suite] -->

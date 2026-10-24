@@ -34,31 +34,37 @@ public class ValidCheckout_Test extends BaseClass {
         wait.until(ExpectedConditions.not(
                 ExpectedConditions.urlContains("/login")));
 
-        // Step 2: Read test data from Excel
-        String id = "CHK-01";
+        // Step 2: Read checkout data from Validcheckout sheet
+        String id = "TC-CHK-01";
 
-        String products =ExcelUtility.getDataByHeader(id, "ProductName");               
-        String firstName =ExcelUtility.getDataByHeader(id, "FirstName");                
-        String lastName =ExcelUtility.getDataByHeader(id, "LastName");                
-        String address =ExcelUtility.getDataByHeader(id, "ShippingAddress");      
-        String payment =ExcelUtility.getDataByHeader(id, "PaymentTestData");
-                
+        String firstName =
+                ExcelUtility.getCheckoutDataByHeader(id, "FirstName");
 
-        // Step 3: Read payment details
-        String[] data = payment.split(";");
-        String card = data[0].split("=", 2)[1];
-        String expiry = data[1].split("=", 2)[1];
-        String cvv = data[2].split("=", 2)[1];
-        String name = data[3].split("=", 2)[1];
+        String lastName =
+                ExcelUtility.getCheckoutDataByHeader(id, "LastName");
 
-        // Step 4: Open catalog and add products
+        String address =
+                ExcelUtility.getCheckoutDataByHeader(id, "Address");
+
+        String card =
+                ExcelUtility.getCheckoutDataByHeader(id, "CardNumber");
+
+        String expiry =
+                ExcelUtility.getCheckoutDataByHeader(id, "ExpiryDate");
+
+        String cvv =
+                ExcelUtility.getCheckoutDataByHeader(id, "CVV");
+
+        String name =
+                ExcelUtility.getCheckoutDataByHeader(id, "NameOnCard");
+
+        // Step 3: Open catalog
         openPage("/catalog");
 
         ProductPage page = new ProductPage(driver);
 
-        for (String product : products.split(";")) {
-            page.addProductToCart(product.trim());
-        }
+        // Step 4: Add product to cart
+        page.addProductToCart("Laptop Backpack");
 
         // Step 5: Open cart
         openPage("/cart");
@@ -67,25 +73,31 @@ public class ValidCheckout_Test extends BaseClass {
                 By.cssSelector("[data-testid='cart-page']")));
 
         // Step 6: Verify cart contains a product
-        By cartItems =By.cssSelector("[data-testid^='cart-item-']");
-                
+        By cartItems =
+                By.cssSelector("[data-testid^='cart-item-']");
+
         wait.until(ExpectedConditions.presenceOfElementLocated(cartItems));
-                
+
         int itemCount = driver.findElements(cartItems).size();
 
         System.out.println("Cart URL: " + driver.getCurrentUrl());
         System.out.println("Cart items: " + itemCount);
 
-        Assert.assertTrue(itemCount > 0,"Cart is empty. Product was not added.");
-                
+        Assert.assertTrue(
+                itemCount > 0,
+                "Cart is empty. Product was not added.");
+
         // Step 7: Proceed to checkout
-        wait.until(ExpectedConditions.elementToBeClickable( By.cssSelector(
-                        "[data-testid='proceed-to-checkout-button']"))).click();
-                
+        wait.until(ExpectedConditions.elementToBeClickable(
+                By.cssSelector(
+                        "[data-testid='proceed-to-checkout-button']")))
+                .click();
+
         // Step 8: Wait for checkout form
-        wait.until(ExpectedConditions.visibilityOfElementLocated( By.id("firstName")));
-               
-        // Step 9: Fill checkout form
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.id("firstName")));
+
+        // Step 9: Enter checkout details
         driver.findElement(By.id("firstName")).sendKeys(firstName);
         driver.findElement(By.id("lastName")).sendKeys(lastName);
         driver.findElement(By.id("address")).sendKeys(address);
@@ -95,10 +107,13 @@ public class ValidCheckout_Test extends BaseClass {
         driver.findElement(By.id("nameOnCard")).sendKeys(name);
 
         // Step 10: Verify checkout page
-        Assert.assertTrue( driver.findElement( By.cssSelector("[data-testid='checkout-page']"))
-        		.isDisplayed(), "Checkout page is not displayed");
+        Assert.assertTrue(
+                driver.findElement(
+                        By.cssSelector("[data-testid='checkout-page']"))
+                        .isDisplayed(),
+                "Checkout page is not displayed");
 
-        Reporter.log("PASS: Checkout data entered for " + id, true);
+        Reporter.log(
+                "PASS: Checkout details entered for " + id, true);
     }
-                
 }

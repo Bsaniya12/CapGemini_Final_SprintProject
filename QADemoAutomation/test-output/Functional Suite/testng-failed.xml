@@ -8,62 +8,13 @@
       </run>
     </groups>
     <classes>
-      <class name="qademo.tests.Order.Order_Refresh_Test">
+      <class name="qademo.tests.Cart.AddMultipleProducts_Test">
         <methods>
-          <include name="verifyOrderRemainsAfterRefresh"/>
+          <include name="verifyMultipleProductsCanBeAdded"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- qademo.tests.Order.Order_Refresh_Test -->
-      <class name="qademo.tests.Order.OrderDetails_Test">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="verifyOrderDetails"/>
-        </methods>
-      </class> <!-- qademo.tests.Order.OrderDetails_Test -->
-      <class name="qademo.tests.Product.ProductDetails_Test">
-        <methods>
-          <include name="verifyProductDetails"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- qademo.tests.Product.ProductDetails_Test -->
-      <class name="qademo.tests.Cart.DecreaseQuantity">
-        <methods>
-          <include name="tearDown"/>
-          <include name="verifyDecreaseQuantity"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- qademo.tests.Cart.DecreaseQuantity -->
-      <class name="qademo.tests.Cart.IncreaseQuantity">
-        <methods>
-          <include name="verifyIncreaseQuantity"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- qademo.tests.Cart.IncreaseQuantity -->
-      <class name="qademo.tests.Cart.CartProductDetails_Test">
-        <methods>
-          <include name="tearDown"/>
-          <include name="verifyCartProductDetails"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- qademo.tests.Cart.CartProductDetails_Test -->
-      <class name="qademo.tests.Cart.AddToCart_Test">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="verifyAddToCart"/>
-        </methods>
-      </class> <!-- qademo.tests.Cart.AddToCart_Test -->
-      <class name="qademo.tests.Cart.ClearCart_Test">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="verifyClearCart"/>
-        </methods>
-      </class> <!-- qademo.tests.Cart.ClearCart_Test -->
+      </class> <!-- qademo.tests.Cart.AddMultipleProducts_Test -->
       <class name="qademo.tests.Checkout.ValidCheckout_Test">
         <methods>
           <include name="tearDown"/>
