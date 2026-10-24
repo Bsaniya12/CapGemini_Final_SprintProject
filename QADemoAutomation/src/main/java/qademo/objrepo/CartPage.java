@@ -4,6 +4,7 @@ package qademo.objrepo;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -96,12 +97,11 @@ public class CartPage {
     }
 
     public void clickContinueShopping() {
-        By continueShoppingLocator = By.cssSelector(
+        By locator = By.cssSelector(
                 "[data-testid='continue-shopping-link-button']");
 
         WebElement button = wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        continueShoppingLocator));
+                ExpectedConditions.elementToBeClickable(locator));
 
         button.click();
     }
@@ -111,21 +111,31 @@ public class CartPage {
                 "[data-testid='proceed-to-checkout-button']");
 
         WebElement button = wait.until(
-                ExpectedConditions.presenceOfElementLocated(
+                ExpectedConditions.visibilityOfElementLocated(
                         checkoutLocator));
 
         ((JavascriptExecutor) driver).executeScript(
                 "arguments[0].scrollIntoView({block:'center'});",
                 button);
 
-        wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        checkoutLocator)).click();
+        try {
+            wait.until(
+                    ExpectedConditions.elementToBeClickable(
+                            checkoutLocator)).click();
+
+        } catch (ElementClickInterceptedException e) {
+
+            button = wait.until(
+                    ExpectedConditions.presenceOfElementLocated(
+                            checkoutLocator));
+
+            ((JavascriptExecutor) driver).executeScript(
+                    "arguments[0].click();", button);
+        }
     }
 
     private void clickElement(WebElement element) {
-        wait.until(
-                ExpectedConditions.visibilityOf(element));
+        wait.until(ExpectedConditions.visibilityOf(element));
 
         ((JavascriptExecutor) driver).executeScript(
                 "arguments[0].scrollIntoView({block:'center'});",

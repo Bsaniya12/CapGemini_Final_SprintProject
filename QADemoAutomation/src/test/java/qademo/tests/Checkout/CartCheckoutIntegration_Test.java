@@ -11,6 +11,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import qademo.baseClass.BaseClass;
+import qademo.objrepo.CartPage;
 import qademo.objrepo.LoginPage;
 import qademo.objrepo.ProductPage;
 import qademo.utility.ExcelUtility;
@@ -21,7 +22,7 @@ public class CartCheckoutIntegration_Test extends BaseClass {
     public void verifyCartToCheckoutIntegration() throws Exception {
 
         WebDriverWait wait =
-                new WebDriverWait(driver, Duration.ofSeconds(15));
+                new WebDriverWait(driver, Duration.ofSeconds(20));
 
         // Step 1: Open login page
         openPage("/login");
@@ -35,7 +36,9 @@ public class CartCheckoutIntegration_Test extends BaseClass {
         wait.until(ExpectedConditions.urlContains("/catalog"));
 
         // Step 3: Read product name from Excel
-        String productName = ExcelUtility.getDataByHeader( "TC-04", "ProductName");            
+        String productName = ExcelUtility.getDataByHeader(
+                "TC-04", "ProductName");
+
         productName = productName.split(";")[0].trim();
 
         // Step 4: Open catalog and add product
@@ -47,31 +50,43 @@ public class CartCheckoutIntegration_Test extends BaseClass {
         // Step 5: Open cart
         openPage("/cart");
 
+        CartPage cart = new CartPage(driver);
+
+        Assert.assertTrue(
+                cart.isCartPageDisplayed(),
+                "Cart page did not open.");
+
         // Step 6: Verify product in cart
-        By cartProduct = By.xpath("//*[@data-testid='cart-items-list']//*[contains(normalize-space(), '"
-        		 + productName + "')]");
-               
+        By cartProduct = By.xpath(
+                "//*[@data-testid='cart-items-list']"
+                + "//*[contains(normalize-space(), '"
+                + productName + "')]");
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(cartProduct));
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        cartProduct));
 
-                
         // Step 7: Click Proceed to Checkout
-        By checkoutButton = By.xpath("//button[contains(normalize-space(), 'Proceed to Checkout')]");
-                
-        wait.until(ExpectedConditions.elementToBeClickable( checkoutButton)).click();
-               
+        cart.clickCheckout();
 
         // Step 8: Wait for checkout page
         wait.until(ExpectedConditions.urlContains("/checkout"));
 
         // Step 9: Verify product in checkout summary
-        By checkoutProduct = By.xpath( "//*[contains(normalize-space(), '" + productName + "')]");
-               
-        wait.until(ExpectedConditions.visibilityOfElementLocated(checkoutProduct));
-                
-        Assert.assertTrue(driver.getCurrentUrl().contains("/checkout"), "Checkout page did not open.");
-                
-        Reporter.log( "PASS: Cart product transferred to checkout successfully.",true);
-               
+        By checkoutProduct = By.xpath(
+                "//*[contains(normalize-space(), '"
+                + productName + "')]");
+
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        checkoutProduct));
+
+        Assert.assertTrue(
+                driver.getCurrentUrl().contains("/checkout"),
+                "Checkout page did not open.");
+
+        Reporter.log(
+                "PASS: Cart product transferred to checkout successfully.",
+                true);
     }
 }

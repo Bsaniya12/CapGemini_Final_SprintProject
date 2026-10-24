@@ -11,9 +11,9 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import qademo.baseClass.BaseClass;
+import qademo.objrepo.CartPage;
 import qademo.objrepo.LoginPage;
 import qademo.objrepo.ProductPage;
-import qademo.objrepo.CartPage;
 import qademo.utility.ExcelUtility;
 
 public class ValidCheckout_Test extends BaseClass {
@@ -37,34 +37,34 @@ public class ValidCheckout_Test extends BaseClass {
         // Step 2: Read checkout data from Excel
         String id = "TC-CHK-01";
 
-        String firstName =
-                ExcelUtility.getCheckoutDataByHeader(id, "FirstName");
+        String firstName = ExcelUtility.getCheckoutDataByHeader(
+                id, "FirstName");
 
-        String lastName =
-                ExcelUtility.getCheckoutDataByHeader(id, "LastName");
+        String lastName = ExcelUtility.getCheckoutDataByHeader(
+                id, "LastName");
 
-        String address =
-                ExcelUtility.getCheckoutDataByHeader(id, "Address");
+        String address = ExcelUtility.getCheckoutDataByHeader(
+                id, "Address");
 
-        String card =
-                ExcelUtility.getCheckoutDataByHeader(id, "CardNumber");
+        String card = ExcelUtility.getCheckoutDataByHeader(
+                id, "CardNumber");
 
-        String expiry =
-                ExcelUtility.getCheckoutDataByHeader(id, "ExpiryDate");
+        String expiry = ExcelUtility.getCheckoutDataByHeader(
+                id, "ExpiryDate");
 
-        String cvv =
-                ExcelUtility.getCheckoutDataByHeader(id, "CVV");
+        String cvv = ExcelUtility.getCheckoutDataByHeader(
+                id, "CVV");
 
-        String name =
-                ExcelUtility.getCheckoutDataByHeader(id, "NameOnCard");
+        String name = ExcelUtility.getCheckoutDataByHeader(
+                id, "NameOnCard");
 
         // Step 3: Open catalog
         openPage("/catalog");
 
-        ProductPage page = new ProductPage(driver);
+        ProductPage product = new ProductPage(driver);
 
         // Step 4: Add product to cart
-        page.addProductToCart("Laptop Backpack");
+        product.addProductToCart("Laptop Backpack");
 
         // Step 5: Open cart
         openPage("/cart");
@@ -73,10 +73,12 @@ public class ValidCheckout_Test extends BaseClass {
                 By.cssSelector("[data-testid='cart-page']")));
 
         // Step 6: Verify cart contains a product
-        By cartItems =
-                By.cssSelector("[data-testid^='cart-item-']");
+        By cartItems = By.cssSelector(
+                "[data-testid^='cart-item-'][role='listitem']");
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(cartItems));
+        wait.until(
+                ExpectedConditions.numberOfElementsToBeMoreThan(
+                        cartItems, 0));
 
         int itemCount = driver.findElements(cartItems).size();
 
@@ -106,10 +108,10 @@ public class ValidCheckout_Test extends BaseClass {
 
         // Step 10: Verify checkout page
         Assert.assertTrue(
-                wait.until(ExpectedConditions.visibilityOfElementLocated(
-                        By.cssSelector("[data-testid='checkout-page']")))
+                driver.findElement(
+                        By.cssSelector("[data-testid='checkout-page']"))
                         .isDisplayed(),
-                "Checkout page is not displayed");
+                "Checkout page is not displayed.");
 
         Reporter.log(
                 "PASS: Checkout details entered for " + id, true);
