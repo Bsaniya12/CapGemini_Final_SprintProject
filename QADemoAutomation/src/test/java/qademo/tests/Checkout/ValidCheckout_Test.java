@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 import qademo.baseClass.BaseClass;
 import qademo.objrepo.LoginPage;
 import qademo.objrepo.ProductPage;
+import qademo.objrepo.CartPage;
 import qademo.utility.ExcelUtility;
 
 public class ValidCheckout_Test extends BaseClass {
@@ -31,10 +32,9 @@ public class ValidCheckout_Test extends BaseClass {
         login.enterPassword(prop.getProperty("password"));
         login.clickSignIn();
 
-        wait.until(ExpectedConditions.not(
-                ExpectedConditions.urlContains("/login")));
+        wait.until(ExpectedConditions.urlContains("/catalog"));
 
-        // Step 2: Read checkout data from Validcheckout sheet
+        // Step 2: Read checkout data from Excel
         String id = "TC-CHK-01";
 
         String firstName =
@@ -88,10 +88,8 @@ public class ValidCheckout_Test extends BaseClass {
                 "Cart is empty. Product was not added.");
 
         // Step 7: Proceed to checkout
-        wait.until(ExpectedConditions.elementToBeClickable(
-                By.cssSelector(
-                        "[data-testid='proceed-to-checkout-button']")))
-                .click();
+        CartPage cartPage = new CartPage(driver);
+        cartPage.clickCheckout();
 
         // Step 8: Wait for checkout form
         wait.until(ExpectedConditions.visibilityOfElementLocated(
@@ -108,8 +106,8 @@ public class ValidCheckout_Test extends BaseClass {
 
         // Step 10: Verify checkout page
         Assert.assertTrue(
-                driver.findElement(
-                        By.cssSelector("[data-testid='checkout-page']"))
+                wait.until(ExpectedConditions.visibilityOfElementLocated(
+                        By.cssSelector("[data-testid='checkout-page']")))
                         .isDisplayed(),
                 "Checkout page is not displayed");
 

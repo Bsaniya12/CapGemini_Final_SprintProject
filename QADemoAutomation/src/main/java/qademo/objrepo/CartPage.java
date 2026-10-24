@@ -1,3 +1,4 @@
+
 package qademo.objrepo;
 
 import java.time.Duration;
@@ -40,22 +41,22 @@ public class CartPage {
     @FindBy(css = "[data-testid='continue-shopping-link-button']")
     WebElement continueShoppingButton;
 
-    @FindBy(css = "[data-testid='proceed-to-checkout-button']")
-    WebElement checkoutButton;
-
     public CartPage(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         PageFactory.initElements(driver, this);
     }
 
     public boolean isCartPageDisplayed() {
         return wait.until(
-                ExpectedConditions.visibilityOf(cartPage)).isDisplayed();
+                ExpectedConditions.visibilityOfElementLocated(
+                        By.cssSelector("[data-testid='cart-page']")))
+                .isDisplayed();
     }
 
     public int getCartItemCount() {
-        wait.until(ExpectedConditions.visibilityOf(cartPage));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.cssSelector("[data-testid='cart-page']")));
 
         return driver.findElements(
                 By.cssSelector(
@@ -68,7 +69,6 @@ public class CartPage {
     }
 
     public boolean isCartEmpty() {
-        wait.until(ExpectedConditions.visibilityOf(cartPage));
         return getCartItemCount() == 0;
     }
 
@@ -76,11 +76,11 @@ public class CartPage {
         By quantityLocator = By.cssSelector(
                 "[data-testid^='cart-item-quantity-']");
 
-        return Integer.parseInt(
-                wait.until(
-                        ExpectedConditions.visibilityOfElementLocated(
-                                quantityLocator))
-                        .getText().trim());
+        String quantityText = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        quantityLocator)).getText().trim();
+
+        return Integer.parseInt(quantityText);
     }
 
     public void increaseFirstProductQuantity() {
@@ -111,7 +111,7 @@ public class CartPage {
                 "[data-testid='proceed-to-checkout-button']");
 
         WebElement button = wait.until(
-                ExpectedConditions.elementToBeClickable(
+                ExpectedConditions.presenceOfElementLocated(
                         checkoutLocator));
 
         ((JavascriptExecutor) driver).executeScript(

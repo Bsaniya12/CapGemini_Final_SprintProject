@@ -4,6 +4,7 @@ package qademo.tests.Cart;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -27,15 +28,17 @@ public class DecreaseQuantity extends BaseClass {
         String productName = ExcelUtility.getDataByHeader(
                 "TC-07", "ProductName");
 
+        productName = productName.split(";")[0].trim();
+
         // Step 2: Open catalog
         openPage("/catalog");
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.cssSelector("[data-testid^='product-card-']")));
 
         // Step 3: Add product to cart
         ProductPage product = new ProductPage(driver);
-        product.addProductToCart(productName.trim());
+        product.addProductToCart(productName);
 
         // Step 4: Open cart
         openPage("/cart");
@@ -51,8 +54,14 @@ public class DecreaseQuantity extends BaseClass {
         // Step 6: Increase quantity
         cart.increaseFirstProductQuantity();
 
-        wait.until(d ->
-                cart.getFirstProductQuantity() == initialQuantity + 1);
+        wait.until(d -> {
+            try {
+                return cart.getFirstProductQuantity()
+                        == initialQuantity + 1;
+            } catch (Exception e) {
+                return false;
+            }
+        });
 
         int increasedQuantity = cart.getFirstProductQuantity();
 
@@ -64,8 +73,14 @@ public class DecreaseQuantity extends BaseClass {
         // Step 7: Decrease quantity
         cart.decreaseFirstProductQuantity();
 
-        wait.until(d ->
-                cart.getFirstProductQuantity() == initialQuantity);
+        wait.until(d -> {
+            try {
+                return cart.getFirstProductQuantity()
+                        == increasedQuantity - 1;
+            } catch (Exception e) {
+                return false;
+            }
+        });
 
         int finalQuantity = cart.getFirstProductQuantity();
 
