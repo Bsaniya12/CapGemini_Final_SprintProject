@@ -1,7 +1,6 @@
-
 package qademo.utility;
 
-import java.io.FileInputStream;
+import java.io.InputStream;
 import java.io.IOException;
 
 import org.apache.poi.ss.usermodel.DataFormatter;
@@ -11,69 +10,68 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtility {
 
-    private static final String FILE_PATH =
-            "src/test/resources/TestDatafile.xlsx";
-
     private static final String SHEET_NAME = "TestData";
 
-    // Read data from TestData sheet
     public static String getDataByHeader(
             String testCaseId, String columnName) throws IOException {
 
         return readData(SHEET_NAME, testCaseId, columnName);
     }
 
-    // Read data from Signup sheet
     public static String getSignupDataByHeader(
             String testCaseId, String columnName) throws IOException {
 
         return readData("Signup", testCaseId, columnName);
     }
 
-    // Read invalid login data from Invalidlogin sheet
+    // Read invalid login data from the Invalidlogin sheet
     public static String getInvalidLoginDataByHeader(
             String testCaseId, String columnName) throws IOException {
 
         return readData("Invalidlogin", testCaseId, columnName);
     }
 
-    // Read checkout data from Validcheckout sheet
+    // Read checkout data from the Validcheckout sheet
     public static String getCheckoutDataByHeader(
             String testCaseId, String columnName) throws IOException {
 
         return readData("Validcheckout", testCaseId, columnName);
     }
 
-    // Common method to read Excel data
     private static String readData(
             String sheetName,
             String testCaseId,
             String columnName) throws IOException {
 
-        try (FileInputStream fis = new FileInputStream(FILE_PATH);
+        InputStream inputStream = ExcelUtility.class
+                .getClassLoader()
+                .getResourceAsStream("TestDatafile.xlsx");
+
+        if (inputStream == null) {
+            throw new IOException(
+                    "TestDatafile.xlsx not found. "
+                    + "Please check src/test/resources/");
+        }
+
+        try (InputStream fis = inputStream;
              XSSFWorkbook workbook = new XSSFWorkbook(fis)) {
 
             Sheet sheet = workbook.getSheet(sheetName);
 
             if (sheet == null) {
-                throw new IOException(
-                        "Sheet not found: " + sheetName);
+                throw new IOException("Sheet not found: " + sheetName);
             }
 
             DataFormatter formatter = new DataFormatter();
-
             Row headerRow = sheet.getRow(0);
 
             if (headerRow == null) {
-                throw new IOException(
-                        "Excel header row is missing in sheet: "
-                                + sheetName);
+                throw new IOException("Excel header row is missing.");
             }
 
             int idColumn = -1;
             int targetColumn = -1;
 
-            // Find column positions using header names
             for (int col = 0;
                     col < headerRow.getLastCellNum(); col++) {
 
@@ -89,19 +87,12 @@ public class ExcelUtility {
                 }
             }
 
-            if (idColumn == -1) {
+            if (idColumn == -1 || targetColumn == -1) {
                 throw new IOException(
-                        "TC_ID column not found in sheet: "
-                                + sheetName);
+                        "Required column not found: " + columnName
+                        + " in sheet " + sheetName);
             }
 
-            if (targetColumn == -1) {
-                throw new IOException(
-                        "Column not found: " + columnName
-                                + " in sheet: " + sheetName);
-            }
-
-            // Find the required test case ID
             for (int i = 1; i <= sheet.getLastRowNum(); i++) {
 
                 Row row = sheet.getRow(i);
@@ -121,8 +112,7 @@ public class ExcelUtility {
                     if (value.isEmpty()) {
                         throw new IOException(
                                 "No value for " + columnName
-                                        + " in test case: "
-                                        + testCaseId);
+                                + " in " + testCaseId);
                     }
 
                     return value;
@@ -131,7 +121,7 @@ public class ExcelUtility {
 
             throw new IOException(
                     "Test case not found: " + testCaseId
-                            + " in sheet: " + sheetName);
+                    + " in sheet " + sheetName);
         }
     }
 }

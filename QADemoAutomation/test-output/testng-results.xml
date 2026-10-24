@@ -1,17 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="21" passed="21" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[PASS: Product listing page displayed successfully.]]>
+      <![CDATA[PASS: Product was added to the cart successfully.]]>
     </line>
     <line>
-      <![CDATA[PASS: Login successful.]]>
+      <![CDATA[PASS: Product details verified for Laptop Backpack]]>
     </line>
     <line>
-      <![CDATA[PASS: Order history page displayed successfully.]]>
+      <![CDATA[PASS: Quantity increased and decreased successfully for Laptop Backpack]]>
     </line>
     <line>
-      <![CDATA[Page URL: https://qademo.com/orders]]>
+      <![CDATA[Products added: Power Bank;Webcam]]>
+    </line>
+    <line>
+      <![CDATA[Multiple products test completed.]]>
+    </line>
+    <line>
+      <![CDATA[PASS: Checkout details entered for TC-CHK-01]]>
+    </line>
+    <line>
+      <![CDATA[Order found: Order #2462]]>
+    </line>
+    <line>
+      <![CDATA[PASS: Order #2462 is still displayed after refresh.]]>
+    </line>
+    <line>
+      <![CDATA[Current URL: https://qademo.com/orders]]>
+    </line>
+    <line>
+      <![CDATA[Order page content:]]>
+    </line>
+    <line>
+      <![CDATA[QA
+Demo
+Products
+B_Saniya
+My Orders
+Welcome back, B_Saniya
+Order #2462
+Pending
+October 16, 2026
+$109.99
+B Saniya
+Order #2428
+Pending
+October 14, 2026
+$159.99
+B Saniya
+Continue Shopping
+QA
+Demo
+An e-commerce testing platform designed for automated testing purposes.
+Quick Links
+Products
+Cart
+Account
+My Orders
+© 2026 QA Demo. Built for testing purposes.
+Browser agents can shop this store with WebMCP tools such as search_products, add_to_cart, and place_order.
+Developed by ManiG with Cloudflare Workers]]>
     </line>
     <line>
       <![CDATA[Product Name: Bluetooth Speaker]]>
@@ -23,24 +71,95 @@
       <![CDATA[PASS: Product details are displayed successfully.]]>
     </line>
     <line>
-      <![CDATA[PASS: Checkout details entered for TC-CHK-01]]>
+      <![CDATA[PASS: Product was added to the cart successfully.]]>
+    </line>
+    <line>
+      <![CDATA[PASS: Cart product transferred to checkout successfully.]]>
+    </line>
+    <line>
+      <![CDATA[PASS: Cart item remained after refresh: Laptop Backpack]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved: C:\Users\DELL\git\Sprintlocalrepo\QADemoAutomation\screenshots\LOG-15_InvalidLogin.png]]>
+    </line>
+    <line>
+      <![CDATA[PASS: Incorrect password was rejected.]]>
+    </line>
+    <line>
+      <![CDATA[PASS: Cart is empty.]]>
+    </line>
+    <line>
+      <![CDATA[PASS: Checkout button is not displayed for an empty cart.]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved: C:\Users\DELL\git\Sprintlocalrepo\QADemoAutomation\screenshots\TC18_EmptyCartCheckout.png]]>
+    </line>
+    <line>
+      <![CDATA[Out-of-stock product: Out of Stock
+Bluetooth Speaker
+Portable Bluetooth speaker with 360-degree sound and 12-hour battery life.
+$159.99
+Add]]>
+    </line>
+    <line>
+      <![CDATA[Out-of-stock product: Out of Stock
+Fitness Tracker
+Water-resistant fitness tracker with sleep monitoring and smartphone notifications.
+$89.99
+Add]]>
+    </line>
+    <line>
+      <![CDATA[Out-of-stock product: Out of Stock
+Laptop Holder
+$20.00
+Add]]>
+    </line>
+    <line>
+      <![CDATA[Out-of-stock product: View Smart Watch]]>
+    </line>
+    <line>
+      <![CDATA[Out-of-stock product: View USB fan]]>
+    </line>
+    <line>
+      <![CDATA[PASS: Out-of-stock products verified.]]>
+    </line>
+    <line>
+      <![CDATA[PASS: Product was added to the cart successfully.]]>
+    </line>
+    <line>
+      <![CDATA[PASS: Shopping Cart page opened successfully.]]>
+    </line>
+    <line>
+      <![CDATA[Products added: Power Bank;Webcam]]>
+    </line>
+    <line>
+      <![CDATA[Multiple products test completed.]]>
+    </line>
+    <line>
+      <![CDATA[PASS: Login page opened successfully.]]>
+    </line>
+    <line>
+      <![CDATA[PASS: Login successful.]]>
+    </line>
+    <line>
+      <![CDATA[PASS: Order history page displayed successfully.]]>
+    </line>
+    <line>
+      <![CDATA[Page URL: https://qademo.com/orders]]>
+    </line>
+    <line>
+      <![CDATA[PASS: Product listing page displayed successfully.]]>
     </line>
   </reporter-output>
-  <suite started-at="2026-10-24T18:13:27 IST" name="QA Demo Parallel Suite" finished-at="2026-10-24T18:13:47 IST" duration-ms="20107">
+  <suite started-at="2026-10-24T18:37:32 IST" name="System Suite" finished-at="2026-10-24T18:37:39 IST" duration-ms="7410">
     <groups>
-      <group name="SM">
-        <method signature="ValidLogin_Test.verifyValidLogin()[pri:0, instance:qademo.tests.Login.ValidLogin_Test@702657cc]" name="verifyValidLogin" class="qademo.tests.Login.ValidLogin_Test"/>
-        <method signature="OrderHistory_Test.verifyOrderHistory()[pri:0, instance:qademo.tests.Order.OrderHistory_Test@15de0b3c]" name="verifyOrderHistory" class="qademo.tests.Order.OrderHistory_Test"/>
-        <method signature="ProductListing_Test.verifyProductListing()[pri:0, instance:qademo.tests.Product.ProductListing_Test@74e52ef6]" name="verifyProductListing" class="qademo.tests.Product.ProductListing_Test"/>
-      </group> <!-- SM -->
-      <group name="FT">
-        <method signature="ValidCheckout_Test.verifyValidCheckout()[pri:0, instance:qademo.tests.Checkout.ValidCheckout_Test@1a677343]" name="verifyValidCheckout" class="qademo.tests.Checkout.ValidCheckout_Test"/>
-        <method signature="ProductDetails_Test.verifyProductDetails()[pri:0, instance:qademo.tests.Product.ProductDetails_Test@6ed3ccb2]" name="verifyProductDetails" class="qademo.tests.Product.ProductDetails_Test"/>
-      </group> <!-- FT -->
+      <group name="ST">
+        <method signature="CartRefresh_Test.verifyCartItemsAfterRefresh()[pri:0, instance:qademo.tests.Cart.CartRefresh_Test@38e79ae3]" name="verifyCartItemsAfterRefresh" class="qademo.tests.Cart.CartRefresh_Test"/>
+      </group> <!-- ST -->
     </groups>
-    <test started-at="2026-10-24T18:13:27 IST" name="QA Demo Tests" finished-at="2026-10-24T18:13:47 IST" duration-ms="20107">
-      <class name="qademo.tests.Product.ProductDetails_Test">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Product.ProductDetails_Test@6ed3ccb2]" started-at="2026-10-24T18:13:27 IST" name="setUp" finished-at="2026-10-24T18:13:31 IST" duration-ms="3593" status="PASS">
+    <test started-at="2026-10-24T18:37:32 IST" name="System Tests" finished-at="2026-10-24T18:37:39 IST" duration-ms="7410">
+      <class name="qademo.tests.Cart.CartRefresh_Test">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Cart.CartRefresh_Test@38e79ae3]" started-at="2026-10-24T18:37:32 IST" name="setUp" finished-at="2026-10-24T18:37:32 IST" duration-ms="772" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -51,7 +170,318 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyProductDetails()[pri:0, instance:qademo.tests.Product.ProductDetails_Test@6ed3ccb2]" started-at="2026-10-24T18:13:31 IST" name="verifyProductDetails" finished-at="2026-10-24T18:13:41 IST" duration-ms="10442" status="PASS">
+        <test-method signature="verifyCartItemsAfterRefresh()[pri:0, instance:qademo.tests.Cart.CartRefresh_Test@38e79ae3]" started-at="2026-10-24T18:37:32 IST" name="verifyCartItemsAfterRefresh" finished-at="2026-10-24T18:37:39 IST" duration-ms="6423" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[PASS: Cart item remained after refresh: Laptop Backpack]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyCartItemsAfterRefresh -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Cart.CartRefresh_Test@38e79ae3]" started-at="2026-10-24T18:37:39 IST" name="tearDown" finished-at="2026-10-24T18:37:39 IST" duration-ms="213" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- qademo.tests.Cart.CartRefresh_Test -->
+    </test> <!-- System Tests -->
+  </suite> <!-- System Suite -->
+  <suite started-at="2026-10-24T18:37:50 IST" name="Smoke Suite" finished-at="2026-10-24T18:38:22 IST" duration-ms="31935">
+    <groups>
+      <group name="SM">
+        <method signature="AddMultipleProducts_Test.verifyMultipleProductsCanBeAdded()[pri:0, instance:qademo.tests.Cart.AddMultipleProducts_Test@a1cdc6d]" name="verifyMultipleProductsCanBeAdded" class="qademo.tests.Cart.AddMultipleProducts_Test"/>
+        <method signature="CartIcon_Test.verifyCartOpens()[pri:0, instance:qademo.tests.Cart.CartIcon_Test@623a8092]" name="verifyCartOpens" class="qademo.tests.Cart.CartIcon_Test"/>
+        <method signature="LoginPage_Test.verifyLoginPageOpens()[pri:0, instance:qademo.tests.Login.LoginPage_Test@175b9425]" name="verifyLoginPageOpens" class="qademo.tests.Login.LoginPage_Test"/>
+        <method signature="ValidLogin_Test.verifyValidLogin()[pri:0, instance:qademo.tests.Login.ValidLogin_Test@3098cf3b]" name="verifyValidLogin" class="qademo.tests.Login.ValidLogin_Test"/>
+        <method signature="OrderHistory_Test.verifyOrderHistory()[pri:0, instance:qademo.tests.Order.OrderHistory_Test@610f7aa]" name="verifyOrderHistory" class="qademo.tests.Order.OrderHistory_Test"/>
+        <method signature="ProductListing_Test.verifyProductListing()[pri:0, instance:qademo.tests.Product.ProductListing_Test@6a03bcb1]" name="verifyProductListing" class="qademo.tests.Product.ProductListing_Test"/>
+        <method signature="AddToCart_Test.verifyAddToCart()[pri:1, instance:qademo.tests.Cart.AddToCart_Test@548e6d58]" name="verifyAddToCart" class="qademo.tests.Cart.AddToCart_Test"/>
+      </group> <!-- SM -->
+      <group name="IT">
+        <method signature="AddToCart_Test.verifyAddToCart()[pri:1, instance:qademo.tests.Cart.AddToCart_Test@548e6d58]" name="verifyAddToCart" class="qademo.tests.Cart.AddToCart_Test"/>
+      </group> <!-- IT -->
+      <group name="FT">
+        <method signature="AddMultipleProducts_Test.verifyMultipleProductsCanBeAdded()[pri:0, instance:qademo.tests.Cart.AddMultipleProducts_Test@a1cdc6d]" name="verifyMultipleProductsCanBeAdded" class="qademo.tests.Cart.AddMultipleProducts_Test"/>
+        <method signature="AddToCart_Test.verifyAddToCart()[pri:1, instance:qademo.tests.Cart.AddToCart_Test@548e6d58]" name="verifyAddToCart" class="qademo.tests.Cart.AddToCart_Test"/>
+      </group> <!-- FT -->
+    </groups>
+    <test started-at="2026-10-24T18:37:50 IST" name="Smoke Tests" finished-at="2026-10-24T18:38:22 IST" duration-ms="31935">
+      <class name="qademo.tests.Cart.AddToCart_Test">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Cart.AddToCart_Test@548e6d58]" started-at="2026-10-24T18:37:50 IST" name="setUp" finished-at="2026-10-24T18:37:51 IST" duration-ms="886" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyAddToCart()[pri:1, instance:qademo.tests.Cart.AddToCart_Test@548e6d58]" started-at="2026-10-24T18:37:51 IST" name="verifyAddToCart" finished-at="2026-10-24T18:37:55 IST" duration-ms="4253" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[PASS: Product was added to the cart successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyAddToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Cart.AddToCart_Test@548e6d58]" started-at="2026-10-24T18:37:55 IST" name="tearDown" finished-at="2026-10-24T18:37:56 IST" duration-ms="214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- qademo.tests.Cart.AddToCart_Test -->
+      <class name="qademo.tests.Product.ProductListing_Test">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Product.ProductListing_Test@6a03bcb1]" started-at="2026-10-24T18:38:19 IST" name="setUp" finished-at="2026-10-24T18:38:20 IST" duration-ms="784" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyProductListing()[pri:0, instance:qademo.tests.Product.ProductListing_Test@6a03bcb1]" started-at="2026-10-24T18:38:20 IST" name="verifyProductListing" finished-at="2026-10-24T18:38:22 IST" duration-ms="1864" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[PASS: Product listing page displayed successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyProductListing -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Product.ProductListing_Test@6a03bcb1]" started-at="2026-10-24T18:38:22 IST" name="tearDown" finished-at="2026-10-24T18:38:22 IST" duration-ms="223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- qademo.tests.Product.ProductListing_Test -->
+      <class name="qademo.tests.Cart.CartIcon_Test">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Cart.CartIcon_Test@623a8092]" started-at="2026-10-24T18:37:56 IST" name="setUp" finished-at="2026-10-24T18:37:56 IST" duration-ms="820" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyCartOpens()[pri:0, instance:qademo.tests.Cart.CartIcon_Test@623a8092]" started-at="2026-10-24T18:37:56 IST" name="verifyCartOpens" finished-at="2026-10-24T18:38:00 IST" duration-ms="4093" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[PASS: Shopping Cart page opened successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyCartOpens -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Cart.CartIcon_Test@623a8092]" started-at="2026-10-24T18:38:00 IST" name="tearDown" finished-at="2026-10-24T18:38:01 IST" duration-ms="168" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- qademo.tests.Cart.CartIcon_Test -->
+      <class name="qademo.tests.Cart.AddMultipleProducts_Test">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Cart.AddMultipleProducts_Test@a1cdc6d]" started-at="2026-10-24T18:38:01 IST" name="setUp" finished-at="2026-10-24T18:38:01 IST" duration-ms="742" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyMultipleProductsCanBeAdded()[pri:0, instance:qademo.tests.Cart.AddMultipleProducts_Test@a1cdc6d]" started-at="2026-10-24T18:38:01 IST" name="verifyMultipleProductsCanBeAdded" finished-at="2026-10-24T18:38:05 IST" duration-ms="3890" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Products added: Power Bank;Webcam]]>
+            </line>
+            <line>
+              <![CDATA[Multiple products test completed.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyMultipleProductsCanBeAdded -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Cart.AddMultipleProducts_Test@a1cdc6d]" started-at="2026-10-24T18:38:05 IST" name="tearDown" finished-at="2026-10-24T18:38:05 IST" duration-ms="203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- qademo.tests.Cart.AddMultipleProducts_Test -->
+      <class name="qademo.tests.Login.LoginPage_Test">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Login.LoginPage_Test@175b9425]" started-at="2026-10-24T18:38:05 IST" name="setUp" finished-at="2026-10-24T18:38:06 IST" duration-ms="868" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyLoginPageOpens()[pri:0, instance:qademo.tests.Login.LoginPage_Test@175b9425]" started-at="2026-10-24T18:38:06 IST" name="verifyLoginPageOpens" finished-at="2026-10-24T18:38:08 IST" duration-ms="1428" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[PASS: Login page opened successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyLoginPageOpens -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Login.LoginPage_Test@175b9425]" started-at="2026-10-24T18:38:08 IST" name="tearDown" finished-at="2026-10-24T18:38:08 IST" duration-ms="179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- qademo.tests.Login.LoginPage_Test -->
+      <class name="qademo.tests.Order.OrderHistory_Test">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Order.OrderHistory_Test@610f7aa]" started-at="2026-10-24T18:38:13 IST" name="setUp" finished-at="2026-10-24T18:38:14 IST" duration-ms="747" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyOrderHistory()[pri:0, instance:qademo.tests.Order.OrderHistory_Test@610f7aa]" started-at="2026-10-24T18:38:14 IST" name="verifyOrderHistory" finished-at="2026-10-24T18:38:19 IST" duration-ms="5458" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[PASS: Order history page displayed successfully.]]>
+            </line>
+            <line>
+              <![CDATA[Page URL: https://qademo.com/orders]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyOrderHistory -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Order.OrderHistory_Test@610f7aa]" started-at="2026-10-24T18:38:19 IST" name="tearDown" finished-at="2026-10-24T18:38:19 IST" duration-ms="205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- qademo.tests.Order.OrderHistory_Test -->
+      <class name="qademo.tests.Login.ValidLogin_Test">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Login.ValidLogin_Test@3098cf3b]" started-at="2026-10-24T18:38:08 IST" name="setUp" finished-at="2026-10-24T18:38:09 IST" duration-ms="824" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyValidLogin()[pri:0, instance:qademo.tests.Login.ValidLogin_Test@3098cf3b]" started-at="2026-10-24T18:38:09 IST" name="verifyValidLogin" finished-at="2026-10-24T18:38:13 IST" duration-ms="3905" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[PASS: Login successful.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyValidLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Login.ValidLogin_Test@3098cf3b]" started-at="2026-10-24T18:38:13 IST" name="tearDown" finished-at="2026-10-24T18:38:13 IST" duration-ms="162" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- qademo.tests.Login.ValidLogin_Test -->
+    </test> <!-- Smoke Tests -->
+  </suite> <!-- Smoke Suite -->
+  <suite started-at="2026-10-24T18:38:22 IST" name="QA Demo Batch Suite" finished-at="2026-10-24T18:38:22 IST" duration-ms="0">
+    <groups>
+    </groups>
+  </suite> <!-- QA Demo Batch Suite -->
+  <suite started-at="2026-10-24T18:37:16 IST" name="Integration Suite" finished-at="2026-10-24T18:37:32 IST" duration-ms="15025">
+    <groups>
+      <group name="SM">
+        <method signature="AddToCart_Test.verifyAddToCart()[pri:1, instance:qademo.tests.Cart.AddToCart_Test@77f80c04]" name="verifyAddToCart" class="qademo.tests.Cart.AddToCart_Test"/>
+      </group> <!-- SM -->
+      <group name="IT">
+        <method signature="CartCheckoutIntegration_Test.verifyCartToCheckoutIntegration()[pri:0, instance:qademo.tests.Checkout.CartCheckoutIntegration_Test@1dac5ef]" name="verifyCartToCheckoutIntegration" class="qademo.tests.Checkout.CartCheckoutIntegration_Test"/>
+        <method signature="AddToCart_Test.verifyAddToCart()[pri:1, instance:qademo.tests.Cart.AddToCart_Test@77f80c04]" name="verifyAddToCart" class="qademo.tests.Cart.AddToCart_Test"/>
+      </group> <!-- IT -->
+      <group name="FT">
+        <method signature="AddToCart_Test.verifyAddToCart()[pri:1, instance:qademo.tests.Cart.AddToCart_Test@77f80c04]" name="verifyAddToCart" class="qademo.tests.Cart.AddToCart_Test"/>
+      </group> <!-- FT -->
+    </groups>
+    <test started-at="2026-10-24T18:37:16 IST" name="Integration Tests" finished-at="2026-10-24T18:37:32 IST" duration-ms="15025">
+      <class name="qademo.tests.Cart.AddToCart_Test">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Cart.AddToCart_Test@77f80c04]" started-at="2026-10-24T18:37:16 IST" name="setUp" finished-at="2026-10-24T18:37:17 IST" duration-ms="749" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyAddToCart()[pri:1, instance:qademo.tests.Cart.AddToCart_Test@77f80c04]" started-at="2026-10-24T18:37:17 IST" name="verifyAddToCart" finished-at="2026-10-24T18:37:21 IST" duration-ms="4056" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[PASS: Product was added to the cart successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyAddToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Cart.AddToCart_Test@77f80c04]" started-at="2026-10-24T18:37:21 IST" name="tearDown" finished-at="2026-10-24T18:37:22 IST" duration-ms="211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- qademo.tests.Cart.AddToCart_Test -->
+      <class name="qademo.tests.Checkout.CartCheckoutIntegration_Test">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Checkout.CartCheckoutIntegration_Test@1dac5ef]" started-at="2026-10-24T18:37:22 IST" name="setUp" finished-at="2026-10-24T18:37:22 IST" duration-ms="748" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyCartToCheckoutIntegration()[pri:0, instance:qademo.tests.Checkout.CartCheckoutIntegration_Test@1dac5ef]" started-at="2026-10-24T18:37:22 IST" name="verifyCartToCheckoutIntegration" finished-at="2026-10-24T18:37:31 IST" duration-ms="9043" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[PASS: Cart product transferred to checkout successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyCartToCheckoutIntegration -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Checkout.CartCheckoutIntegration_Test@1dac5ef]" started-at="2026-10-24T18:37:31 IST" name="tearDown" finished-at="2026-10-24T18:37:32 IST" duration-ms="209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- qademo.tests.Checkout.CartCheckoutIntegration_Test -->
+    </test> <!-- Integration Tests -->
+  </suite> <!-- Integration Suite -->
+  <suite started-at="2026-10-24T18:36:12 IST" name="Functional Suite" finished-at="2026-10-24T18:37:16 IST" duration-ms="64735">
+    <groups>
+      <group name="SM">
+        <method signature="AddMultipleProducts_Test.verifyMultipleProductsCanBeAdded()[pri:0, instance:qademo.tests.Cart.AddMultipleProducts_Test@24269709]" name="verifyMultipleProductsCanBeAdded" class="qademo.tests.Cart.AddMultipleProducts_Test"/>
+        <method signature="AddToCart_Test.verifyAddToCart()[pri:1, instance:qademo.tests.Cart.AddToCart_Test@385c9627]" name="verifyAddToCart" class="qademo.tests.Cart.AddToCart_Test"/>
+      </group> <!-- SM -->
+      <group name="IT">
+        <method signature="AddToCart_Test.verifyAddToCart()[pri:1, instance:qademo.tests.Cart.AddToCart_Test@385c9627]" name="verifyAddToCart" class="qademo.tests.Cart.AddToCart_Test"/>
+      </group> <!-- IT -->
+      <group name="FT">
+        <method signature="AddMultipleProducts_Test.verifyMultipleProductsCanBeAdded()[pri:0, instance:qademo.tests.Cart.AddMultipleProducts_Test@24269709]" name="verifyMultipleProductsCanBeAdded" class="qademo.tests.Cart.AddMultipleProducts_Test"/>
+        <method signature="ValidCheckout_Test.verifyValidCheckout()[pri:0, instance:qademo.tests.Checkout.ValidCheckout_Test@2aceadd4]" name="verifyValidCheckout" class="qademo.tests.Checkout.ValidCheckout_Test"/>
+        <method signature="OrderDetails_Test.verifyOrderDetails()[pri:0, instance:qademo.tests.Order.OrderDetails_Test@3a52dba3]" name="verifyOrderDetails" class="qademo.tests.Order.OrderDetails_Test"/>
+        <method signature="Order_Refresh_Test.verifyOrderRemainsAfterRefresh()[pri:0, instance:qademo.tests.Order.Order_Refresh_Test@24aed80c]" name="verifyOrderRemainsAfterRefresh" class="qademo.tests.Order.Order_Refresh_Test"/>
+        <method signature="ProductDetails_Test.verifyProductDetails()[pri:0, instance:qademo.tests.Product.ProductDetails_Test@2a5c8d3f]" name="verifyProductDetails" class="qademo.tests.Product.ProductDetails_Test"/>
+        <method signature="AddToCart_Test.verifyAddToCart()[pri:1, instance:qademo.tests.Cart.AddToCart_Test@385c9627]" name="verifyAddToCart" class="qademo.tests.Cart.AddToCart_Test"/>
+        <method signature="CartProductDetails_Test.verifyCartProductDetails()[pri:3, instance:qademo.tests.Cart.CartProductDetails_Test@5dda768f]" name="verifyCartProductDetails" class="qademo.tests.Cart.CartProductDetails_Test"/>
+        <method signature="DecreaseQuantity.verifyDecreaseQuantity()[pri:5, instance:qademo.tests.Cart.DecreaseQuantity@7a8c8dcf]" name="verifyDecreaseQuantity" class="qademo.tests.Cart.DecreaseQuantity"/>
+      </group> <!-- FT -->
+    </groups>
+    <test started-at="2026-10-24T18:36:12 IST" name="Functional Tests" finished-at="2026-10-24T18:37:16 IST" duration-ms="64735">
+      <class name="qademo.tests.Product.ProductDetails_Test">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Product.ProductDetails_Test@2a5c8d3f]" started-at="2026-10-24T18:37:08 IST" name="setUp" finished-at="2026-10-24T18:37:08 IST" duration-ms="781" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyProductDetails()[pri:0, instance:qademo.tests.Product.ProductDetails_Test@2a5c8d3f]" started-at="2026-10-24T18:37:08 IST" name="verifyProductDetails" finished-at="2026-10-24T18:37:16 IST" duration-ms="7785" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Product Name: Bluetooth Speaker]]>
@@ -64,13 +494,13 @@
             </line>
           </reporter-output>
         </test-method> <!-- verifyProductDetails -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Product.ProductDetails_Test@6ed3ccb2]" started-at="2026-10-24T18:13:41 IST" name="tearDown" finished-at="2026-10-24T18:13:42 IST" duration-ms="408" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Product.ProductDetails_Test@2a5c8d3f]" started-at="2026-10-24T18:37:16 IST" name="tearDown" finished-at="2026-10-24T18:37:16 IST" duration-ms="213" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- qademo.tests.Product.ProductDetails_Test -->
-      <class name="qademo.tests.Product.ProductListing_Test">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Product.ProductListing_Test@74e52ef6]" started-at="2026-10-24T18:13:27 IST" name="setUp" finished-at="2026-10-24T18:13:31 IST" duration-ms="3610" status="PASS">
+      <class name="qademo.tests.Cart.AddToCart_Test">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Cart.AddToCart_Test@385c9627]" started-at="2026-10-24T18:36:12 IST" name="setUp" finished-at="2026-10-24T18:36:14 IST" duration-ms="1865" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -81,20 +511,20 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyProductListing()[pri:0, instance:qademo.tests.Product.ProductListing_Test@74e52ef6]" started-at="2026-10-24T18:13:31 IST" name="verifyProductListing" finished-at="2026-10-24T18:13:34 IST" duration-ms="3485" status="PASS">
+        <test-method signature="verifyAddToCart()[pri:1, instance:qademo.tests.Cart.AddToCart_Test@385c9627]" started-at="2026-10-24T18:36:14 IST" name="verifyAddToCart" finished-at="2026-10-24T18:36:18 IST" duration-ms="4588" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[PASS: Product listing page displayed successfully.]]>
+              <![CDATA[PASS: Product was added to the cart successfully.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- verifyProductListing -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Product.ProductListing_Test@74e52ef6]" started-at="2026-10-24T18:13:34 IST" name="tearDown" finished-at="2026-10-24T18:13:40 IST" duration-ms="5468" status="PASS">
+        </test-method> <!-- verifyAddToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Cart.AddToCart_Test@385c9627]" started-at="2026-10-24T18:36:18 IST" name="tearDown" finished-at="2026-10-24T18:36:19 IST" duration-ms="557" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- qademo.tests.Product.ProductListing_Test -->
-      <class name="qademo.tests.Login.ValidLogin_Test">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Login.ValidLogin_Test@702657cc]" started-at="2026-10-24T18:13:27 IST" name="setUp" finished-at="2026-10-24T18:13:31 IST" duration-ms="3592" status="PASS">
+      </class> <!-- qademo.tests.Cart.AddToCart_Test -->
+      <class name="qademo.tests.Cart.AddMultipleProducts_Test">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Cart.AddMultipleProducts_Test@24269709]" started-at="2026-10-24T18:36:34 IST" name="setUp" finished-at="2026-10-24T18:36:35 IST" duration-ms="818" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -105,20 +535,155 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyValidLogin()[pri:0, instance:qademo.tests.Login.ValidLogin_Test@702657cc]" started-at="2026-10-24T18:13:31 IST" name="verifyValidLogin" finished-at="2026-10-24T18:13:36 IST" duration-ms="5436" status="PASS">
+        <test-method signature="verifyMultipleProductsCanBeAdded()[pri:0, instance:qademo.tests.Cart.AddMultipleProducts_Test@24269709]" started-at="2026-10-24T18:36:35 IST" name="verifyMultipleProductsCanBeAdded" finished-at="2026-10-24T18:36:40 IST" duration-ms="4542" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[PASS: Login successful.]]>
+              <![CDATA[Products added: Power Bank;Webcam]]>
+            </line>
+            <line>
+              <![CDATA[Multiple products test completed.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- verifyValidLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Login.ValidLogin_Test@702657cc]" started-at="2026-10-24T18:13:36 IST" name="tearDown" finished-at="2026-10-24T18:13:40 IST" duration-ms="3433" status="PASS">
+        </test-method> <!-- verifyMultipleProductsCanBeAdded -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Cart.AddMultipleProducts_Test@24269709]" started-at="2026-10-24T18:36:40 IST" name="tearDown" finished-at="2026-10-24T18:36:40 IST" duration-ms="237" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- qademo.tests.Login.ValidLogin_Test -->
+      </class> <!-- qademo.tests.Cart.AddMultipleProducts_Test -->
+      <class name="qademo.tests.Cart.CartProductDetails_Test">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Cart.CartProductDetails_Test@5dda768f]" started-at="2026-10-24T18:36:19 IST" name="setUp" finished-at="2026-10-24T18:36:20 IST" duration-ms="1561" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyCartProductDetails()[pri:3, instance:qademo.tests.Cart.CartProductDetails_Test@5dda768f]" started-at="2026-10-24T18:36:20 IST" name="verifyCartProductDetails" finished-at="2026-10-24T18:36:27 IST" duration-ms="6984" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[PASS: Product details verified for Laptop Backpack]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyCartProductDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Cart.CartProductDetails_Test@5dda768f]" started-at="2026-10-24T18:36:27 IST" name="tearDown" finished-at="2026-10-24T18:36:28 IST" duration-ms="237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- qademo.tests.Cart.CartProductDetails_Test -->
+      <class name="qademo.tests.Order.OrderDetails_Test">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Order.OrderDetails_Test@3a52dba3]" started-at="2026-10-24T18:36:59 IST" name="setUp" finished-at="2026-10-24T18:37:00 IST" duration-ms="807" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyOrderDetails()[pri:0, instance:qademo.tests.Order.OrderDetails_Test@3a52dba3]" started-at="2026-10-24T18:37:00 IST" name="verifyOrderDetails" finished-at="2026-10-24T18:37:07 IST" duration-ms="7343" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Current URL: https://qademo.com/orders]]>
+            </line>
+            <line>
+              <![CDATA[Order page content:]]>
+            </line>
+            <line>
+              <![CDATA[QA
+Demo
+Products
+B_Saniya
+My Orders
+Welcome back, B_Saniya
+Order #2462
+Pending
+October 16, 2026
+$109.99
+B Saniya
+Order #2428
+Pending
+October 14, 2026
+$159.99
+B Saniya
+Continue Shopping
+QA
+Demo
+An e-commerce testing platform designed for automated testing purposes.
+Quick Links
+Products
+Cart
+Account
+My Orders
+© 2026 QA Demo. Built for testing purposes.
+Browser agents can shop this store with WebMCP tools such as search_products, add_to_cart, and place_order.
+Developed by ManiG with Cloudflare Workers]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyOrderDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Order.OrderDetails_Test@3a52dba3]" started-at="2026-10-24T18:37:07 IST" name="tearDown" finished-at="2026-10-24T18:37:08 IST" duration-ms="194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- qademo.tests.Order.OrderDetails_Test -->
+      <class name="qademo.tests.Order.Order_Refresh_Test">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Order.Order_Refresh_Test@24aed80c]" started-at="2026-10-24T18:36:51 IST" name="setUp" finished-at="2026-10-24T18:36:52 IST" duration-ms="827" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyOrderRemainsAfterRefresh()[pri:0, instance:qademo.tests.Order.Order_Refresh_Test@24aed80c]" started-at="2026-10-24T18:36:52 IST" name="verifyOrderRemainsAfterRefresh" finished-at="2026-10-24T18:36:59 IST" duration-ms="7205" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Order found: Order #2462]]>
+            </line>
+            <line>
+              <![CDATA[PASS: Order #2462 is still displayed after refresh.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyOrderRemainsAfterRefresh -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Order.Order_Refresh_Test@24aed80c]" started-at="2026-10-24T18:36:59 IST" name="tearDown" finished-at="2026-10-24T18:36:59 IST" duration-ms="187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- qademo.tests.Order.Order_Refresh_Test -->
+      <class name="qademo.tests.Cart.DecreaseQuantity">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Cart.DecreaseQuantity@7a8c8dcf]" started-at="2026-10-24T18:36:28 IST" name="setUp" finished-at="2026-10-24T18:36:29 IST" duration-ms="1050" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyDecreaseQuantity()[pri:5, instance:qademo.tests.Cart.DecreaseQuantity@7a8c8dcf]" started-at="2026-10-24T18:36:29 IST" name="verifyDecreaseQuantity" finished-at="2026-10-24T18:36:34 IST" duration-ms="5391" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[PASS: Quantity increased and decreased successfully for Laptop Backpack]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyDecreaseQuantity -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Cart.DecreaseQuantity@7a8c8dcf]" started-at="2026-10-24T18:36:34 IST" name="tearDown" finished-at="2026-10-24T18:36:34 IST" duration-ms="195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- qademo.tests.Cart.DecreaseQuantity -->
       <class name="qademo.tests.Checkout.ValidCheckout_Test">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Checkout.ValidCheckout_Test@1a677343]" started-at="2026-10-24T18:13:27 IST" name="setUp" finished-at="2026-10-24T18:13:31 IST" duration-ms="3592" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Checkout.ValidCheckout_Test@2aceadd4]" started-at="2026-10-24T18:36:40 IST" name="setUp" finished-at="2026-10-24T18:36:40 IST" duration-ms="709" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -129,20 +694,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyValidCheckout()[pri:0, instance:qademo.tests.Checkout.ValidCheckout_Test@1a677343]" started-at="2026-10-24T18:13:31 IST" name="verifyValidCheckout" finished-at="2026-10-24T18:13:47 IST" duration-ms="16123" status="PASS">
+        <test-method signature="verifyValidCheckout()[pri:0, instance:qademo.tests.Checkout.ValidCheckout_Test@2aceadd4]" started-at="2026-10-24T18:36:40 IST" name="verifyValidCheckout" finished-at="2026-10-24T18:36:51 IST" duration-ms="10283" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[PASS: Checkout details entered for TC-CHK-01]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyValidCheckout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Checkout.ValidCheckout_Test@1a677343]" started-at="2026-10-24T18:13:47 IST" name="tearDown" finished-at="2026-10-24T18:13:47 IST" duration-ms="328" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Checkout.ValidCheckout_Test@2aceadd4]" started-at="2026-10-24T18:36:51 IST" name="tearDown" finished-at="2026-10-24T18:36:51 IST" duration-ms="292" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- qademo.tests.Checkout.ValidCheckout_Test -->
-      <class name="qademo.tests.Order.OrderHistory_Test">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Order.OrderHistory_Test@15de0b3c]" started-at="2026-10-24T18:13:27 IST" name="setUp" finished-at="2026-10-24T18:13:31 IST" duration-ms="3592" status="PASS">
+    </test> <!-- Functional Tests -->
+  </suite> <!-- Functional Suite -->
+  <suite started-at="2026-10-24T18:37:39 IST" name="Negative Suite" finished-at="2026-10-24T18:37:50 IST" duration-ms="11216">
+    <groups>
+      <group name="NT">
+        <method signature="OutOfStock_Test.verifyOutOfStockProduct()[pri:0, instance:qademo.tests.Cart.OutOfStock_Test@1ebd319f]" name="verifyOutOfStockProduct" class="qademo.tests.Cart.OutOfStock_Test"/>
+        <method signature="EmptyCartCheckout_Test.verifyCheckoutWithEmptyCart()[pri:0, instance:qademo.tests.Checkout.EmptyCartCheckout_Test@7b02881e]" name="verifyCheckoutWithEmptyCart" class="qademo.tests.Checkout.EmptyCartCheckout_Test"/>
+        <method signature="InvalidLogin_Test.verifyLoginWithIncorrectPassword()[pri:0, instance:qademo.tests.Login.InvalidLogin_Test@5f8edcc5]" name="verifyLoginWithIncorrectPassword" class="qademo.tests.Login.InvalidLogin_Test"/>
+      </group> <!-- NT -->
+    </groups>
+    <test started-at="2026-10-24T18:37:39 IST" name="Negative Tests" finished-at="2026-10-24T18:37:50 IST" duration-ms="11216">
+      <class name="qademo.tests.Login.InvalidLogin_Test">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Login.InvalidLogin_Test@5f8edcc5]" started-at="2026-10-24T18:37:39 IST" name="setUp" finished-at="2026-10-24T18:37:40 IST" duration-ms="817" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -153,21 +729,101 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyOrderHistory()[pri:0, instance:qademo.tests.Order.OrderHistory_Test@15de0b3c]" started-at="2026-10-24T18:13:31 IST" name="verifyOrderHistory" finished-at="2026-10-24T18:13:39 IST" duration-ms="7806" status="PASS">
+        <test-method signature="verifyLoginWithIncorrectPassword()[pri:0, instance:qademo.tests.Login.InvalidLogin_Test@5f8edcc5]" started-at="2026-10-24T18:37:40 IST" name="verifyLoginWithIncorrectPassword" finished-at="2026-10-24T18:37:44 IST" duration-ms="4349" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[PASS: Order history page displayed successfully.]]>
+              <![CDATA[Screenshot saved: C:\Users\DELL\git\Sprintlocalrepo\QADemoAutomation\screenshots\LOG-15_InvalidLogin.png]]>
             </line>
             <line>
-              <![CDATA[Page URL: https://qademo.com/orders]]>
+              <![CDATA[PASS: Incorrect password was rejected.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- verifyOrderHistory -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Order.OrderHistory_Test@15de0b3c]" started-at="2026-10-24T18:13:39 IST" name="tearDown" finished-at="2026-10-24T18:13:40 IST" duration-ms="1701" status="PASS">
+        </test-method> <!-- verifyLoginWithIncorrectPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Login.InvalidLogin_Test@5f8edcc5]" started-at="2026-10-24T18:37:44 IST" name="tearDown" finished-at="2026-10-24T18:37:44 IST" duration-ms="205" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- qademo.tests.Order.OrderHistory_Test -->
-    </test> <!-- QA Demo Tests -->
-  </suite> <!-- QA Demo Parallel Suite -->
+      </class> <!-- qademo.tests.Login.InvalidLogin_Test -->
+      <class name="qademo.tests.Checkout.EmptyCartCheckout_Test">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Checkout.EmptyCartCheckout_Test@7b02881e]" started-at="2026-10-24T18:37:44 IST" name="setUp" finished-at="2026-10-24T18:37:45 IST" duration-ms="801" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyCheckoutWithEmptyCart()[pri:0, instance:qademo.tests.Checkout.EmptyCartCheckout_Test@7b02881e]" started-at="2026-10-24T18:37:45 IST" name="verifyCheckoutWithEmptyCart" finished-at="2026-10-24T18:37:47 IST" duration-ms="1695" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[PASS: Cart is empty.]]>
+            </line>
+            <line>
+              <![CDATA[PASS: Checkout button is not displayed for an empty cart.]]>
+            </line>
+            <line>
+              <![CDATA[Screenshot saved: C:\Users\DELL\git\Sprintlocalrepo\QADemoAutomation\screenshots\TC18_EmptyCartCheckout.png]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyCheckoutWithEmptyCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Checkout.EmptyCartCheckout_Test@7b02881e]" started-at="2026-10-24T18:37:47 IST" name="tearDown" finished-at="2026-10-24T18:37:47 IST" duration-ms="177" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- qademo.tests.Checkout.EmptyCartCheckout_Test -->
+      <class name="qademo.tests.Cart.OutOfStock_Test">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:qademo.tests.Cart.OutOfStock_Test@1ebd319f]" started-at="2026-10-24T18:37:47 IST" name="setUp" finished-at="2026-10-24T18:37:48 IST" duration-ms="755" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyOutOfStockProduct()[pri:0, instance:qademo.tests.Cart.OutOfStock_Test@1ebd319f]" started-at="2026-10-24T18:37:48 IST" name="verifyOutOfStockProduct" finished-at="2026-10-24T18:37:50 IST" duration-ms="2198" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Out-of-stock product: Out of Stock
+Bluetooth Speaker
+Portable Bluetooth speaker with 360-degree sound and 12-hour battery life.
+$159.99
+Add]]>
+            </line>
+            <line>
+              <![CDATA[Out-of-stock product: Out of Stock
+Fitness Tracker
+Water-resistant fitness tracker with sleep monitoring and smartphone notifications.
+$89.99
+Add]]>
+            </line>
+            <line>
+              <![CDATA[Out-of-stock product: Out of Stock
+Laptop Holder
+$20.00
+Add]]>
+            </line>
+            <line>
+              <![CDATA[Out-of-stock product: View Smart Watch]]>
+            </line>
+            <line>
+              <![CDATA[Out-of-stock product: View USB fan]]>
+            </line>
+            <line>
+              <![CDATA[PASS: Out-of-stock products verified.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyOutOfStockProduct -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qademo.tests.Cart.OutOfStock_Test@1ebd319f]" started-at="2026-10-24T18:37:50 IST" name="tearDown" finished-at="2026-10-24T18:37:50 IST" duration-ms="209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- qademo.tests.Cart.OutOfStock_Test -->
+    </test> <!-- Negative Tests -->
+  </suite> <!-- Negative Suite -->
 </testng-results>

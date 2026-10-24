@@ -5,7 +5,7 @@
 
     <suite-files>
         <suite-file path="Func.xml"/>
-        <suite-file path="integration.xml"/>
+        <suite-file path="Integration.xml"/>
         <suite-file path="System.xml"/>
         <suite-file path="Negative.xml"/>
         <suite-file path="Smoke.xml"/>
