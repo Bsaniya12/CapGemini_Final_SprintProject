@@ -8,20 +8,13 @@
       </run>
     </groups>
     <classes>
-      <class name="qademo.tests.Cart.AddMultipleProducts_Test">
-        <methods>
-          <include name="verifyMultipleProductsCanBeAdded"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- qademo.tests.Cart.AddMultipleProducts_Test -->
-      <class name="qademo.tests.Checkout.ValidCheckout_Test">
+      <class name="qademo.tests.Cart.DecreaseQuantity">
         <methods>
           <include name="tearDown"/>
-          <include name="verifyValidCheckout"/>
+          <include name="verifyDecreaseQuantity"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- qademo.tests.Checkout.ValidCheckout_Test -->
+      </class> <!-- qademo.tests.Cart.DecreaseQuantity -->
     </classes>
   </test> <!-- Functional Tests(failed) -->
 </suite> <!-- Failed suite [Functional Suite] -->

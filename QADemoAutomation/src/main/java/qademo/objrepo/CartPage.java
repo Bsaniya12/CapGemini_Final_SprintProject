@@ -1,8 +1,6 @@
-
 package qademo.objrepo;
 
 import java.time.Duration;
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -60,7 +58,8 @@ public class CartPage {
         wait.until(ExpectedConditions.visibilityOf(cartPage));
 
         return driver.findElements(
-                By.cssSelector("[data-testid^='cart-item-'][role='listitem']")
+                By.cssSelector(
+                        "[data-testid^='cart-item-'][role='listitem']")
         ).size();
     }
 
@@ -73,17 +72,16 @@ public class CartPage {
         return getCartItemCount() == 0;
     }
 
+    public int getFirstProductQuantity() {
+        By quantityLocator = By.cssSelector(
+                "[data-testid^='cart-item-quantity-']");
 
-public int getFirstProductQuantity() {
-    By quantity = By.cssSelector(
-            "[data-testid^='cart-item-quantity-']");
-
-    return Integer.parseInt(
-            wait.until(
-                    ExpectedConditions.visibilityOfElementLocated(quantity))
-                    .getText().trim());
-}
-
+        return Integer.parseInt(
+                wait.until(
+                        ExpectedConditions.visibilityOfElementLocated(
+                                quantityLocator))
+                        .getText().trim());
+    }
 
     public void increaseFirstProductQuantity() {
         clickElement(increaseButton);
@@ -98,24 +96,42 @@ public int getFirstProductQuantity() {
     }
 
     public void clickContinueShopping() {
-        By continueShoppingButton = By.cssSelector(
+        By continueShoppingLocator = By.cssSelector(
                 "[data-testid='continue-shopping-link-button']");
 
-        wait.until(
+        WebElement button = wait.until(
                 ExpectedConditions.elementToBeClickable(
-                        continueShoppingButton)).click();
+                        continueShoppingLocator));
+
+        button.click();
     }
 
     public void clickCheckout() {
-        clickElement(checkoutButton);
+        By checkoutLocator = By.cssSelector(
+                "[data-testid='proceed-to-checkout-button']");
+
+        WebElement button = wait.until(
+                ExpectedConditions.elementToBeClickable(
+                        checkoutLocator));
+
+        ((JavascriptExecutor) driver).executeScript(
+                "arguments[0].scrollIntoView({block:'center'});",
+                button);
+
+        wait.until(
+                ExpectedConditions.elementToBeClickable(
+                        checkoutLocator)).click();
     }
 
     private void clickElement(WebElement element) {
-        wait.until(ExpectedConditions.visibilityOf(element));
+        wait.until(
+                ExpectedConditions.visibilityOf(element));
 
         ((JavascriptExecutor) driver).executeScript(
-                "arguments[0].scrollIntoView({block:'center'});", element);
+                "arguments[0].scrollIntoView({block:'center'});",
+                element);
 
-        wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+        wait.until(
+                ExpectedConditions.elementToBeClickable(element)).click();
     }
 }
